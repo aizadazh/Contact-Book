@@ -1,0 +1,28 @@
+{
+    "contacts": [
+      {
+        "name": "Ivan",
+        "surname": "Petrov",
+        "phone": "+996552440028",        
+        "id": "1"
+      },
+      {
+        "name": "Petr",
+        "surname": "Ivanov",
+        "phone": "+996552440029",        
+        "id": "2"
+      },
+      {
+        "name": "Alisa",
+        "surname": "Vasnova",
+        "phone": "+996552440030",        
+        "id": "3"
+      },
+      {
+        "name": "Vasiliy",
+        "surname": "Pechkin",
+        "phone": "+996552440031",        
+        "id": "4"
+      }
+    ]
+}
