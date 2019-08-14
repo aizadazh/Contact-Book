@@ -30,13 +30,13 @@ export default function (state=initialState, action) {
         }
         case DELETE_CONTACT: {
             return {
-                ...state,
-                contacts: state.contact.filter(
-                    contact => contact.id !== action.payload,
-                ),
+              ...state,
+              contacts: state.contacts.filter(
+                contact => contact.id !== action.payload,
+              ),
             };
-        }
-        default:
+          }
+          default:
             return state;
         }
-    }
+      }

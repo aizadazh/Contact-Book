@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Header = props => {
     const { branding } = props;
     return (
-        <nav className="navbar navbar-expand-sm navbar-dark bg-danger mb-3 py-0">
+        <nav className="navbar navbar-expand-sm navbar-dark bg-info mb-3 py-3">
           <div className="container">
             <a href="/" className="navbar-brand">
               {branding}
@@ -14,28 +14,23 @@ const Header = props => {
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item">
                   <Link to="/" className="nav-link">
-                    <i className="fas fa-home" /> Home
+                    <i className="fas fa-home" /> Главная
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link to="/contact/add" className="nav-link">
-                    <i className="fas fa-plus" /> Add
+                    <i className="fas fa-plus" /> Добавить 
                   </Link>
-                </li>
-                <li className="nav-item">
-                  <Link to="/about" className="nav-link">
-                    <i className="fas fa-question" /> About
-                  </Link>
-                </li>
+                </li>                
               </ul>
             </div>
           </div>
         </nav>
       );
     };
-Header.default.props = {
-    branding: "My Contact Book"
-};
+  Header.defaultProps = {
+    branding: 'Contact Book'
+  };
 Header.propTypes = {
     branding: propTypes.string.isRequired,
 };

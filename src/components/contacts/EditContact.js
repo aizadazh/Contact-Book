@@ -68,38 +68,38 @@ class EditContact extends Component {
 
     return (
       <div className="card mb-3">
-        <div className="card-header">Edit Contact</div>
+        <div className="card-header">Редактировать контакт</div>
         <div className="card-body">
           <form onSubmit={this.onSubmit}>
             <TextInputGroup
-              label="Name"
+              label="ФИО"
               name="name"
-              placeholder="Enter Name"
+              placeholder="Введите имя"
               value={name}
               onChange={this.onChange}
               error={errors.name}
             />
             <TextInputGroup
-              label="Address"
+              label="Адрес"
               name="address"
               type="address"
-              placeholder="Enter address"
+              placeholder="Введите адрес"
               value={address}
               onChange={this.onChange}
               error={errors.address}
             />
             <TextInputGroup
-              label="Phone"
+              label="Номер телефона"
               name="phone"
-              placeholder="Enter Phone"
+              placeholder="Введите номер телефона"
               value={phone}
               onChange={this.onChange}
               error={errors.phone}
             />
             <input
               type="submit"
-              value="EditContact"
-              className="btn btn-light btn-block"
+              value="Редактировать контакт"
+              className="btn btn-dark btn-block"
             />
           </form>
         </div>
@@ -108,7 +108,7 @@ class EditContact extends Component {
   }
 }
 EditContact.propTypes = {
-  contact: propTypes.object.isRequired,
+  contact: propTypes.string.isRequired,
   getContact: propTypes.func.isRequired,
 };
 const mapStateToProps = state => ({

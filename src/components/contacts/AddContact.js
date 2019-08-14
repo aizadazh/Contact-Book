@@ -50,11 +50,11 @@ class AddContact extends Component {
 
         return (
             <div className="card mb-3">
-                <div className="card-header">Add Contact</div>
+                <div className="card-header">Добавить контакт</div>
                     <div className="card-body">
                         <form onSubmit={this.onSubmit}>
                             <TextInputGroup
-                                label="Name"
+                                label="ФИО"
                                 name="name"
                                 placeholder="Введите имя"
                                 value={name}
@@ -62,7 +62,7 @@ class AddContact extends Component {
                                 error={errors.name}
                             />
                             <TextInputGroup
-                                label="Address"
+                                label="Адрес"
                                 name="address"
                                 type="address"
                                 placeholder="Введите адрес"
@@ -71,7 +71,7 @@ class AddContact extends Component {
                                 error={errors.address}
                             />
                             <TextInputGroup
-                                label="Phone"
+                                label="Номер телефона"
                                 name="phone"
                                 placeholder="Введите номер телефона"
                                 value={phone}
@@ -80,8 +80,8 @@ class AddContact extends Component {
                             />
                             <input
                                 type="submit"
-                                value="Add Contact"
-                                className="btn btn-light btn-block"
+                                value="Добавить контакт"
+                                className="btn btn-danger btn-block"
                             />
                         </form>
                     </div>

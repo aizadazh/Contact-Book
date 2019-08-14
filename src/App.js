@@ -15,7 +15,7 @@ class App extends Component {
       <Provider store={store}>
         <Router>
           <div className="App">
-            <Header branding="Contact Manager" />
+            <Header branding = "Контактная книга" />
             <div className="container">
               <Switch>
                 <Route exact path="/" component={Contacts} />
