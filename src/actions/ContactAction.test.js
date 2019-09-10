@@ -1,37 +1,22 @@
 import mockAxios from "axios";
-import configureMockStore from "redux-mock-store";
-import thunk from "redux-thunk";
-import promiseMiddleware from "redux-promise-middleware";
-import { getContacts } from "./ContactAction";
+import configureMockStore from 'redux-mock-store'
+import thunk from 'redux-thunk'
+import { getContacts } from "./ContactAction"; 
 
-const mockStore = configureMockStore([thunk, promiseMiddleware()]);
+jest.mock('../store.js');
+test('Retrieve transaction data based on a date range', async () => {
+  const middlewares = [thunk]
+  const mockStore = configureMockStore(middlewares)
+  const store = mockStore()
+  const mockData = {
+    'data': 123
+  }
 
-describe("CET_CONTACTS", () => {
-  let store;
-
-  beforeEach(() => {
-    store = mockStore({
-      contacts: []
-    });
-  });
-  describe("getContacts action creator", () => {
-    it("dispatches GET_CONTACTS action and returns data on success", async () => {
-      mockAxios.get.mockImplementationOnce(() =>
-        Promise.resolve({
-          data: [{ id: 1, name: "Vasilis" }]
-        })
-      );
-  
-      await store.dispatch(getContacts());
-      const actions = store.getActions();
-      // [ { type: "GET_CONTACTS_PENDING" },
-      //   { type: "GET_CONTACTS_FULFILLED", payload: { data: [Array] } } 
-      // ]
-  
-      expect.assertions(3);
-      expect(actions[0].type).toEqual("GET_CONTACTS_PENDING");
-      expect(actions[1].type).toEqual("GET_CONTACTS_FULFILLED");
-      expect(actions[1].payload.data[0].name).toEqual("Vasilis");
-    });
-  });
+mockAxios.get.mockImplementationOnce(() =>
+    Promise.resolve({ data: mockData }),
+  )
+  const actions = store.getActions();    
+  await store.dispatch(getContacts()); 
+  expect(actions[0].type).toEqual("GET_CONTACTS");   
+  expect(mockAxios.get).toHaveBeenCalledTimes(1);  
 });

@@ -1,5 +1,4 @@
-import {
-    GET_CONTACTS,
+import { GET_CONTACTS,
     DELETE_CONTACT,
     ADD_CONTACT,
     GET_CONTACT,

@@ -5,7 +5,7 @@ import propTypes from "prop-types";
 import { deleteContact } from "../../actions/ContactAction";
 
 
-class Contact extends Component {
+export class Contact extends Component {
     state = {
         showContactInfo: false,
     };

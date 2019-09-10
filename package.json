@@ -48,6 +48,8 @@
     ]
   },
   "devDependencies": {
-    "enzyme": "^3.10.0"
+    "enzyme": "^3.10.0",
+    "redux-mock-store": "^1.5.3",
+    "redux-promise-middleware": "^6.1.1"
   }
 }
