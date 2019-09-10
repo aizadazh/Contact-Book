@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Provider, connect } from "react-redux";
+import { connect } from "react-redux";
 import propTypes from "prop-types";
 import { deleteContact } from "../../actions/ContactAction";
-import store from "../../store";
+
 
 class Contact extends Component {
     state = {
@@ -16,7 +16,7 @@ class Contact extends Component {
         const { id, name, address, phone } = this.props.contact;
         const { showContactInfo} = this.state;
         return(
-            <Provider store={store}>
+            <div>
                 <h4>
                     {name}{" "}
                     <i 
@@ -51,7 +51,7 @@ class Contact extends Component {
                             <li className="list-group-item">Phone: {phone}</li>
                         </ul>
                     ) : null }
-            </Provider>
+            </div>
         );
     }
 }
