@@ -65,7 +65,6 @@ class EditContact extends Component {
 
   render() {
     const { name, address, phone, errors } = this.state;
-
     return (
       <div className="card mb-3">
         <div className="card-header">Редактировать контакт</div>

@@ -4,7 +4,7 @@ import TextInputGroup from "../layout/TextInputGroup";
 import { connect } from "react-redux";
 import { addContact } from "../../actions/ContactAction";
 
-class AddContact extends Component {
+export class AddContact extends Component {
     state = {
         name: "",
         address:"",

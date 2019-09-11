@@ -6,7 +6,7 @@ describe("Testing Contact component", ()=>{
     const props = {
         contact: {
             id: 1,
-            name: "{$props.contact.name}",
+            name: "Aizada",
             address: "Shopokova",
             phone: "0552440028"
         },
@@ -21,7 +21,7 @@ describe("Testing availability of classes, tags and icons", ()=>{
         expect(wrapper.find('.fas fa-sort-down')).toHaveLength(0);
         expect(wrapper.find('.fas fa-times')).toHaveLength(0);
         expect(wrapper.find('.fas fa-pencil-alt')).toHaveLength(0);
-        expect(wrapper.find('h4').text()).toEqual('{$props.contact.name} <Link />');
+        expect(wrapper.find('h4').text()).toEqual('Aizada <Link />');
         wrapper.setState({showContactInfo: true});
 
         expect(wrapper.setState({ showContactInfo: true }))

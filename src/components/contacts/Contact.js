@@ -14,7 +14,7 @@ export class Contact extends Component {
     };
     render(){
         const { id, name, address, phone } = this.props.contact;
-        const { showContactInfo} = this.state;
+        const { showContactInfo } = this.state;
         return(
             <div>
                 <h4>
@@ -26,7 +26,7 @@ export class Contact extends Component {
                             })
                         }
                         className = "fas fa-sort-down"
-                        style = {{cursor: "pointer"}}
+                        style = {{cursor: "pointer", color: "blue"}}
                         />
                     <i 
                         className = "fas fa-times"
@@ -39,8 +39,10 @@ export class Contact extends Component {
                             style={{
                                 cursor: "pointer",
                                 float: "right",
-                                color: "grey",                               
+                                color: "green",                               
                                 marginRight: "1rem",
+                                fontSize: "0.7em",
+                                paddingTop: "0.3em",
                             }}
                         />
                     </Link>                    
