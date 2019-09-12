@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { Contact } from "./Contact";
+import { Contact } from "../components/contacts/Contact";
 
 describe("Testing Contact component", ()=>{
     const props = {

@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { AddContact } from "./AddContact";
+import { AddContact } from "../components/contacts/AddContact";
 
 
 function setup() {

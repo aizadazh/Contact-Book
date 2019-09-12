@@ -1,4 +1,4 @@
-import ContactReducer from "./ContactReducer";
+import ContactReducer from "../reducers/ContactReducer";
 import GET_CONTACTS from "../actions/ActionTypes";
 
 

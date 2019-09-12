@@ -1,7 +1,7 @@
 import mockAxios from "axios";
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
-import { getContacts } from "./ContactAction"; 
+import { getContacts } from "../actions/ContactAction"; 
 
 jest.mock('../store.js');
 test('Retrieve transaction data based on a date range', async () => {
