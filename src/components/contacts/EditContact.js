@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import propTypes from "prop-types";
 import { getContact, editContact } from "../../actions/ContactAction";
 
-class EditContact extends Component {
+export class EditContact extends Component {
   state = {
     name: "",
     address: "",
