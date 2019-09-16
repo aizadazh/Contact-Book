@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { AddContact } from "../components/contacts/AddContact";
+import { AddContact } from "../components/containers/AddContact";
 
 
 function setup() {
@@ -25,9 +25,16 @@ describe("Testing AddContact component", () => {
         expect(wrapper.find('.card-header').text()).toBe('Добавить контакт')        
         expect(wrapper.find('TextGroupInput')).toBeDefined()
     })
-    it('should call addContact if length of text is greater than 0', ()=> {
+    it('should check something', ()=> {
         const { wrapper } = setup()        
         expect(wrapper.find('value')).toEqual({})
+    })
+   
+})
+
+describe("Testing setState", () => {
+    it('expect to call something', ()=> {
+        
 
     })
 })

@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { EditContact } from "../components/contacts/EditContact";
+import { EditContact } from "../components/containers/EditContact";
 
 function setup() {
     const props = {

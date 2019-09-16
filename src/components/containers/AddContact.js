@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import propTypes from "prop-types";
-import TextInputGroup from "../layout/TextInputGroup";
+import TextInputGroup from "../presentational/TextInputGroup";
 import { connect } from "react-redux";
 import { addContact } from "../../actions/ContactAction";
 
