@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 import { AddContact } from "../components/containers/AddContact";
 
 
@@ -10,7 +10,7 @@ function setup() {
             address: "Bishkek",
             phone: "0552440028",
         },
-        addContact: jest.fn()
+        addContact: jest.fn() 
     }
     const wrapper = shallow(<AddContact {...props} />)
         return {
@@ -34,7 +34,8 @@ describe("Testing AddContact component", () => {
 
 describe("Testing setState", () => {
     it('expect to call something', ()=> {
-        
-
+        const wrapper = mount(<AddContact />);       
+        wrapper.instance().setState = jest.fn();  
     })
 })
+
