@@ -14,7 +14,14 @@ export class Contact extends Component {
     };
     render(){
         const { id, name, address, phone } = this.props.contact;
+        console.log(this.props.contact.address.street)
         const { showContactInfo } = this.state;
+        let nameOfStreet=''
+        if(this.props.contact.address.substring){
+            nameOfStreet=address
+        }else{
+            nameOfStreet=address.street
+        }
         return(
             <div>
                 <h4>
@@ -49,7 +56,7 @@ export class Contact extends Component {
                 </h4>
                     {showContactInfo ? (
                         <ul className="list-group">
-                            <li className="list-group-item">Address: {address}</li>
+                            <li className="list-group-item">Address: {nameOfStreet}</li>
                             <li className="list-group-item">Phone: {phone}</li>
                         </ul>
                     ) : null }

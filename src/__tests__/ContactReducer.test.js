@@ -20,8 +20,7 @@ describe("ContactReducer", () => {
             {
                 contacts: [],
                 contact: {},
-            },
-          
+            },          
         );
     });
     test('can handle GET_CONTACT', ()=> {
