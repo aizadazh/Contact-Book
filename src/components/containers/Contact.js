@@ -13,15 +13,17 @@ export class Contact extends Component {
         this.props.deleteContact(id);
     };
     render(){
-        const { id, name, address, phone } = this.props.contact;
-        console.log(this.props.contact.address.street)
+        console.log(this.props.contact)
+        const { id, name, phone } = this.props.contact;
         const { showContactInfo } = this.state;
-        let nameOfStreet=''
-        if(this.props.contact.address.substring){
-            nameOfStreet=address
+        
+        var nameOfStreet=''
+        if(this.props.contact.address.constructor === String){
+            nameOfStreet=this.props.contact.address
         }else{
-            nameOfStreet=address.street
+            nameOfStreet=this.props.contact.address.street
         }
+        
         return(
             <div>
                 <h4>

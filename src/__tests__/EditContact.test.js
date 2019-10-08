@@ -6,7 +6,7 @@ function setup() {
     const props = {
         contact: "Aizada Zhumalieva",
         getContact: jest.fn(),
-        match: { params: "params" }
+        match: { params: { id: 1 }}
     }
     const wrapper = shallow(<EditContact {...props} />)
     return {

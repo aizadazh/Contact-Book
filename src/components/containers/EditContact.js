@@ -15,10 +15,12 @@ export class EditContact extends Component {
   componentDidMount() {
     const { id } = this.props.match.params;
     this.props.getContact(id);
+   
   }
   componentWillReceiveProps(nextProps, nextState) {
     const { name, address, phone } = nextProps.contact;
     this.setState({ name, address, phone });
+    console.log(address.street)
   }
 
   onSubmit = e => {
@@ -83,7 +85,7 @@ export class EditContact extends Component {
               name="address"
               type="address"
               placeholder="Введите адрес"
-              value={address}
+              value={address.street}
               onChange={this.onChange}
               error={errors.address}
             />
